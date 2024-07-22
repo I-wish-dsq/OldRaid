@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "oldraid",
+	"version": "${version}",
+	"name": "OldRaid",
+	"description": "Mod return old raid system in 1.21",
+	"authors": [
+		"aluminiumtn"
+	],
+	"contact": {
+		"homepage": "https://github.com/I-wish-dsq",
+		"sources": "https://www.meme-arsenal.com/memes/b45cf9184a1c0eac79268cf719241e2f.jpg"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/oldraid/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.aluminiumtn.oldraid.OldRaid"
+		],
+		"client": [
+			"net.aluminiumtn.oldraid.OldRaidClient"
+		]
+	},
+	"mixins": [
+		"oldraid.mixins.json",
+		{
+			"config": "oldraid.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.21",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
